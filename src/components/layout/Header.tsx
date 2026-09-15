@@ -82,7 +82,7 @@ const Header = () => {
             {isOpen && (
               <div className="flex w-full flex-col items-start gap-8 bg-background p-4">
                 {renderNavButtons()}
-                <ResumeButton />
+                <ResumeButton setIsOpen={setIsOpen} />
               </div>
             )}
           </nav>
@@ -104,7 +104,7 @@ const Header = () => {
             <div className="flex items-center gap-12">{renderNavButtons()}</div>
 
             {/* Resume */}
-            <ResumeButton />
+            <ResumeButton setIsOpen={setIsOpen} />
           </nav>
         </div>
       </div>
@@ -112,10 +112,17 @@ const Header = () => {
   );
 };
 
-const ResumeButton = () => {
+const ResumeButton = ({
+  setIsOpen,
+}: {
+  setIsOpen: (isOpen: boolean) => void;
+}) => {
   return (
     <Link
       href="/resume"
+      onClick={() => {
+        setIsOpen(false);
+      }}
       className="group flex items-center gap-2 rounded-xs border border-border p-2 transition-all duration-200 hover:border-primary/50 hover:text-primary"
     >
       <HiOutlineDocumentText size={18} />
