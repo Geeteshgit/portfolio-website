@@ -66,6 +66,7 @@
   --font-sans: var(--font-space-mono);
   --font-mono: var(--font-space-mono);
   --font-heading: var(--font-space-mono);
+  --font-body: var(--font-geist);
 
   /* Radius */
   --radius-sm: calc(var(--radius) * 0.6);
