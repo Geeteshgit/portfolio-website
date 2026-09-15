@@ -1,26 +1,128 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background */
+  --background: #050709;
+  --foreground: #f5f5f5;
+
+  /* Surfaces */
+  --surface: #0b0f12;
+  --elevated: #11161a;
+
+  /* Text */
+  --muted: #a1a1aa;
+
+  /* Brand */
+  --primary: #a855f7;
+  --primary-hover: #9333ea;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Radius */
+  --radius: 0.625rem;
 }
 
 @theme inline {
+  /* Core */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Your design system */
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+
+  /* shadcn compatibility */
+  --color-card: var(--surface);
+  --color-card-foreground: var(--foreground);
+
+  --color-popover: var(--elevated);
+  --color-popover-foreground: var(--foreground);
+
+  --color-secondary: var(--elevated);
+  --color-secondary-foreground: var(--foreground);
+
+  --color-accent: var(--elevated);
+  --color-accent-foreground: var(--foreground);
+
+  --color-muted-foreground: var(--muted);
+
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  /* Fonts */
+  --font-sans: var(--font-space-mono);
+  --font-mono: var(--font-space-mono);
+  --font-heading: var(--font-space-mono);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background-color: rgba(168, 85, 247, 0.25);
+  color: #ffffff;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  background-color: var(--background);
+
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.12) 1px,
+    transparent 1px
+  );
+
+  background-size: 24px 24px;
+
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes scaleInfinite {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+.scale-infinite {
+  animation: scaleInfinite 5s ease-in-out infinite;
 }
