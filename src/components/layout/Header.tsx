@@ -116,7 +116,7 @@ const ResumeButton = () => {
   return (
     <Link
       href="/resume"
-      className="group flex items-center gap-2 rounded-xs border border-white/15 p-2 font-medium transition-all duration-200 hover:border-primary/50 hover:text-primary"
+      className="group flex items-center gap-2 rounded-xs border border-border p-2 transition-all duration-200 hover:border-primary/50 hover:text-primary"
     >
       <HiOutlineDocumentText size={18} />
       <span>Resume</span>
