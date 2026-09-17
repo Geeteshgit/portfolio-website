@@ -14,7 +14,7 @@ const ProfileLinks = ({ href, Icon, label }: ProfileLinksProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 rounded-xs font-body border border-border hover:border-white/30 transition-all bg-surface p-2.5 mt-1"
+      className="flex items-center gap-3 rounded-xs border border-border hover:border-white/30 transition-all bg-surface p-2.5"
     >
       <Icon className="shrink-0 text-muted" size={18} />
       <span className="flex-1">{label}</span>

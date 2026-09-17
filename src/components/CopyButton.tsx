@@ -23,7 +23,7 @@ const CopyButton = ({ value }: CopyButtonProps) => {
     <button
       type="button"
       onClick={handleCopy}
-      className="flex items-center justify-center p-1 text-muted transition-colors hover:text-primary cursor-pointer"
+      className="flex items-center justify-center text-muted transition-colors hover:text-primary cursor-pointer"
       aria-label={copied ? "Copied" : "Copy"}
     >
       {copied ? <FiCheck size={18} /> : <FiCopy size={18} />}

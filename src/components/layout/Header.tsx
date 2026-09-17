@@ -54,7 +54,7 @@ const Header = () => {
       <div className="w-full border-b border-border bg-background">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-16">
           {/* Mobile Header */}
-          <nav className="relative sm:hidden">
+          <nav className="relative md:hidden">
             <div className="flex h-15 items-center justify-between">
               {/* Logo */}
               <Link href="/" onClick={() => setIsOpen(false)}>
@@ -88,7 +88,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop Header */}
-          <nav className="hidden h-15 items-center justify-between sm:flex">
+          <nav className="hidden h-15 items-center justify-between md:flex">
             {/* Logo */}
             <Link href="/">
               <ShinyText
