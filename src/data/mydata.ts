@@ -1,4 +1,5 @@
 type Data = {
+  location: string;
   email: string;
   phone: string;
   linkedin: string;
@@ -9,6 +10,7 @@ type Data = {
 };
 
 export const myData: Data = {
+  location: "New Delhi, India",
   email: "geeteshdalal.work@gmail.com",
   phone: "+91 9821960747",
   linkedin: "https://www.linkedin.com/in/geeteshdalal",
