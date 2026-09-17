@@ -36,7 +36,7 @@ const Header = () => {
           onClick={() => scrollToSection(item)}
           className={`group relative cursor-pointer text-xl tracking-widest transition-all duration-200 sm:text-sm
             after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0
-            after:bg-foreground after:transition-all after:duration-300
+            after:bg-primary after:transition-all after:duration-300
             after:content-[''] hover:after:w-full
             ${
               active === id
