@@ -92,8 +92,8 @@ html::-webkit-scrollbar {
 }
 
 ::selection {
-  background-color: rgba(168, 85, 247, 0.25);
-  color: #ffffff;
+  background-color: #a855f7;
+  color: #f5f5f5;
 }
 
 body {

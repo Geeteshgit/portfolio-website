@@ -11,7 +11,7 @@ const Header = () => {
   const [active, setActive] = useState("about");
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["about", "projects", "skills", "education"];
+  const navItems = ["about", "projects", "skills", "coding"];
 
   const scrollToSection = (item: string) => {
     const id = item.toLowerCase();
