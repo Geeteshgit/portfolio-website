@@ -15,7 +15,7 @@ const ProfileCard = ({ label, Icon, line, href }: ProfileCardProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-60 flex-col rounded-xs border border-border bg-surface p-5 hover:border-primary transition-all duration-300"
+      className="group flex h-60 flex-col rounded-xs border border-border bg-surface p-5 hover:shadow-[0_0_25px_rgba(168,85,247,0.30)] hover:border-primary transition-all duration-300"
     >
       <div className="flex items-start justify-between">
         <span className="text-sm font-medium text-muted group-hover:text-primary transition-colors duration-300">

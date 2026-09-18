@@ -12,7 +12,7 @@ const TechStackCategoryCard = ({ category }: TechStackCategoryCardProps) => {
   return (
     <div
       key={category.title}
-      className="rounded-xs border border-border bg-surface p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300 group"
+      className="rounded-xs border border-border bg-surface p-5 hover:shadow-[0_0_25px_rgba(168,85,247,0.30)] hover:border-primary hover:-translate-y-1 transition-all duration-300 group"
     >
       <h3 className="tracking-widest uppercase">{category.title}</h3>
 
