@@ -2,7 +2,7 @@ import React from "react";
 
 const CurrentlyFocused = () => {
   return (
-    <div className="shrink-0 relative w-full rounded-xs border border-border bg-surface p-5 shadow-[inset_0_0_15px_var(--color-primary)]">
+    <div className="relative w-full rounded-xs border border-border bg-surface p-5 shadow-[inset_0_0_15px_var(--color-primary)]">
       {/* Pulsing status dot */}
       <span className="absolute -left-1 -top-1 flex h-4 w-4">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />

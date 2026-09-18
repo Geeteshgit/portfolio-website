@@ -7,7 +7,7 @@ const AboutContent = () => {
   return (
     <div className="flex flex-col gap-4">
       <span className="tracking-wide">FULL STACK DEVELOPER</span>
-      <h1 className="text-6xl lg:text-7xl tracking-tight text-shadow-[0_0_30px_rgba(255,255,255,0.6)]">
+      <h1 className="font-body text-6xl lg:text-7xl tracking-tight text-shadow-[0_0_30px_rgba(255,255,255,0.6)]">
         Geetesh Dalal
       </h1>
       <span className="flex items-center gap-2 text-sm uppercase tracking-wide">
