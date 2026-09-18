@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { HiOutlineDocumentText } from "react-icons/hi2";
@@ -8,41 +9,38 @@ import Link from "next/link";
 import ShinyText from "../ShinyText";
 
 const Header = () => {
-  const [active, setActive] = useState("about");
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = ["about", "projects", "skills", "coding"];
+  const navItems = ["about", "profiles", "projects", "skills"];
+  const router = useRouter();
+  const pathname = usePathname();
 
   const scrollToSection = (item: string) => {
     const id = item.toLowerCase();
-    const section = document.getElementById(id);
 
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setActive(id);
+    if (pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      setIsOpen(false);
+      return;
     }
 
+    router.push(`/#${id}`);
     setIsOpen(false);
   };
 
   const renderNavButtons = () =>
     navItems.map((item) => {
-      const id = item.toLowerCase();
-
       return (
         <button
           key={item}
           type="button"
           onClick={() => scrollToSection(item)}
-          className={`group relative cursor-pointer text-xl tracking-widest transition-all duration-200 sm:text-sm
+          className="group relative cursor-pointer text-xl tracking-widest transition-all duration-200 sm:text-sm
             after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0
             after:bg-primary after:transition-all after:duration-300
-            after:content-[''] hover:after:w-full
-            ${
-              active === id
-                ? "text-foreground"
-                : "text-foreground/70 hover:text-foreground"
-            }`}
+            after:content-[''] hover:after:w-full"
         >
           {item.toUpperCase()}
         </button>
