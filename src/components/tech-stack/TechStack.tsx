@@ -3,9 +3,12 @@ import TechStackCategoryCard from "./TechStackCategoryCard";
 
 const TechStack = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-10 flex flex-col gap-6">
+    <section
+      id="skills"
+      className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-10 flex flex-col gap-6"
+    >
       <div>
-        <p className="text-primary">Tech Stack</p>
+        <p className="text-primary uppercase tracking-wide">Tech Stack</p>
 
         <h2 className="mt-2 text-3xl tracking-tight md:text-4xl">
           What I work with
