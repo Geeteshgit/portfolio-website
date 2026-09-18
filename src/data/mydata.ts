@@ -6,6 +6,7 @@ type Data = {
   resume: string;
   github: string;
   leetcode: string;
+  geeksforgeeks: string;
   CGPA: number;
 };
 
@@ -18,5 +19,7 @@ export const myData: Data = {
     "https://drive.google.com/file/d/1y-7ZK_SeygvUpaZXBzxTNVAvPh8-cq1K/view?usp=sharing",
   github: "https://github.com/Geeteshgit",
   leetcode: "https://leetcode.com/Geetesh_Dalal",
+  geeksforgeeks:
+    "https://www.geeksforgeeks.org/profile/geetesw1vh?tab=activity",
   CGPA: 8.88,
 };

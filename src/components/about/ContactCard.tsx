@@ -2,11 +2,11 @@ import React from "react";
 import CopyButton from "../CopyButton";
 import { IconType } from "react-icons";
 
-type ContactDetailsProps = {
+type ContactCardProps = {
   Icon: IconType;
   value: string;
 };
-const ContactDetails = ({ Icon, value }: ContactDetailsProps) => {
+const ContactCard = ({ Icon, value }: ContactCardProps) => {
   return (
     <div className="flex items-center gap-3 rounded-xs border border-border bg-surface p-2.5">
       <Icon className="text-muted" size={18} />
@@ -15,4 +15,4 @@ const ContactDetails = ({ Icon, value }: ContactDetailsProps) => {
     </div>
   );
 };
-export default ContactDetails;
+export default ContactCard;
