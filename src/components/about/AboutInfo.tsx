@@ -1,15 +1,28 @@
 import CurrentlyFocused from "./CurrentlyFocused";
 import ContactCard from "./ContactCard";
-import { FiMail, FiPhone } from "react-icons/fi";
+import { FiArrowUpRight, FiMail, FiPhone } from "react-icons/fi";
 import { myData } from "@/data/mydata";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const AboutInfo = () => {
   return (
-    <div className="shrink-0 w-xs md:w-sm lg:w-xs flex flex-col md:flex-row lg:flex-col md:items-stretch gap-2">
+    <div className="w-full shrink-0 max-w-sm md:w-sm lg:w-xs flex flex-col lg:flex-col md:items-stretch gap-2">
       <CurrentlyFocused />
-      <div className="w-full flex flex-col gap-1 mt-1 md:mt-0 lg:mt-1 font-body text-sm">
-        <ContactCard Icon={FiMail} value={myData.email} />
-        <ContactCard Icon={FiPhone} value={myData.phone} />
+      <div className="flex flex-col gap-1">
+        <div className="w-full flex flex-col gap-1 mt-1 font-body text-sm">
+          <ContactCard Icon={FiMail} value={myData.email} />
+          <ContactCard Icon={FiPhone} value={myData.phone} />
+        </div>
+        <a
+          href={myData.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-xs border border-border hover:border-primary transition-all bg-surface p-2.5"
+        >
+          <FaLinkedinIn className="shrink-0 text-muted" size={18} />
+          <span className="flex-1 text-sm font-body">LinkedIn</span>
+          <FiArrowUpRight size={18} className="shrink-0 text-muted" />
+        </a>
       </div>
     </div>
   );
